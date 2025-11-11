@@ -1,0 +1,311 @@
+https://discord.gg/p6HDEd9SFghttps://discord.gg/p6HDEd9SFghttps://discord.gg/p6HDEd9SFgDOCTYPEhttps://discord.gg/p6HDEd9SFg html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NusaRealms - Server Minecraft Indonesia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    :root {
+      --gold: #ffcc00;
+      --neon: #ffe066;
+      --bg: #000;
+      --text: #fff;
+      --card: #0d0d0d;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* BLINK LIGHT PARTICLES */
+    .blink-light {
+      position: fixed;
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: blink 2s infinite alternate;
+      opacity: 0.7;
+      filter: drop-shadow(0 0 6px var(--gold));
+    }
+
+    @keyframes blink {
+      0% { opacity: 0.2; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.5); }
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      display:flex; justify-content:space-between; align-items:center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 1000;
+      animation: navGlow 3s infinite alternate;
+    }
+    @keyframes navGlow {
+      from { box-shadow: 0 0 10px transparent; }
+      to { box-shadow: 0 0 25px var(--gold); }
+    }
+
+    nav h2 { color: var(--gold); text-shadow:0 0 20px var(--gold); }
+    nav a { color: #fff; margin:0 15px; text-decoration:none; font-weight:600; transition:.3s; }
+    nav a:hover { color: var(--gold); text-shadow:0 0 12px var(--gold); }
+
+    /* HEADER */
+    header {
+      text-align:center;
+      padding: 170px 20px 130px;
+      animation: fadeIn 2.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(40px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+
+    header h1 {
+      font-size: 4rem;
+      color: var(--gold);
+      text-shadow: 0 0 35px var(--gold);
+      animation: glowPulse 3s infinite alternate;
+    }
+    @keyframes glowPulse {
+      from { text-shadow: 0 0 20px var(--gold); }
+      to { text-shadow: 0 0 40px var(--neon); }
+    }
+
+    header p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.25rem;
+      line-height:1.8;
+      opacity: 0.9;
+      animation: slideFade 2s ease;
+    }
+    @keyframes slideFade {
+      from { opacity:0; transform:translateX(-30px); }
+      to { opacity:1; transform:translateX(0); }
+    }
+
+    /* CAROUSEL */
+    #carousel {
+      width: 92%; max-width: 950px;
+      margin: 40px auto;
+      overflow:hidden;
+      border-radius:20px;
+      box-shadow:0 0 30px var(--gold);
+      animation: borderFlicker 4s infinite alternate;
+    }
+
+    @keyframes borderFlicker {
+      from { box-shadow: 0 0 15px var(--gold); }
+      to { box-shadow: 0 0 35px var(--neon); }
+    }
+
+    #carousel img {
+      width:100%;
+      transition:1s;
+    }
+
+    /* CARD GRID */
+    .grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:30px;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .card {
+      width: 300px;
+      padding:30px;
+      background:var(--card);
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 15px rgba(255,255,255,0.06);
+      position:relative;
+      overflow:hidden;
+      transition:.3s;
+    }
+
+    .card:hover { transform:scale(1.07); box-shadow:0 0 25px var(--gold); }
+
+    .card::before {
+      content:"";
+      position:absolute;
+      width:300%; height:300%;
+      background:conic-gradient(var(--gold), transparent, transparent);
+      top:-130%; left:-130%;
+      animation: spinGlow 4s linear infinite;
+      opacity:.4;
+    }
+
+    @keyframes spinGlow {
+      to { transform:rotate(360deg); }
+    }
+
+    .card h3 { color:var(--gold); margin-bottom:10px; }
+
+    .section-title {
+      text-align:center;
+      font-size:2.6rem;
+      color:var(--gold);
+      margin-top:100px;
+      text-shadow:0 0 25px var(--gold);
+      animation: glowPulse 3s infinite alternate;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top:80px;
+      padding:45px;
+      background:#050505;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BLINKING LIGHT PARTICLES -->
+  <script>
+    for(let i=0;i<25;i++){
+      let l = document.createElement('div');
+      l.className = 'blink-light';
+      l.style.left = Math.random()*100 + 'vw';
+      l.style.top = Math.random()*100 + 'vh';
+      l.style.animationDelay = (Math.random()*3)+'s';
+      document.body.appendChild(l);
+    }
+  </script>
+
+  <!-- NAV -->
+  <nav>
+    <h2>NusaRealms</h2>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#server">Server</a>
+      <a href="#top">Top Players</a>
+      <a href="#roadmap">Roadmap</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="home">
+    <h1>NusaRealms</h1>
+    <p>
+      Selamat datang di dunia penuh warna, cahaya, dan petualangan tanpa batas. NusaRealms hadir bukan hanya sebagai tempat bermain,
+      tetapi sebagai rumah kedua bagi para penjelajah, builder, warrior, trader, hingga pemain santai yang ingin menghabiskan waktu
+      di dunia pixelated yang hidup. Setiap blok yang diletakkan, setiap dungeon yang ditaklukkan, dan setiap teman yang ditemui,
+      semuanya menjadi bagian dari perjalanan epikmu.
+    </p>
+    <p style="margin-top:25px;">
+      Dengan server yang stabil, komunitas ramah, dan fitur lengkap, NusaRealms dirancang sebagai tempat di mana kreativitas bertemu
+      fantasi. Bergabunglah dan rasakan pengalaman Minecraft dengan kualitas premium — dunia yang selalu hidup, berkembang,
+      dan berevolusi bersama para pemainnya.
+    </p>
+  </header>
+
+  <!-- CAROUSEL -->
+  <h2 class="section-title">Banner Showcase</h2>
+  <!-- ADVANCED CAROUSEL (VIDEO + IMAGES) -->
+  <div id="carousel" style="position:relative;">
+    <video id="bannerVideo" src="VID-20251107-WA0008.mp4" autoplay loop muted playsinline style="width:100%; border-radius:20px; opacity:1; transition:1s;"></video>
+    <img id="bannerImg" src="banner1.png" style="width:100%; border-radius:20px; position:absolute; top:0; left:0; opacity:0; transition:1s;">
+
+    <!-- MUTE BUTTON -->
+    <button onclick="toggleMute()" style="position:absolute; bottom:20px; right:20px; padding:10px 18px; background:var(--gold); color:#000; border:none; border-radius:8px; font-weight:700; cursor:pointer; box-shadow:0 0 12px var(--gold);">🔊 / 🔇</button>
+  </div>
+
+  <script>
+    let vid = document.getElementById('bannerVideo');
+    let img = document.getElementById('bannerImg');
+    const imgList = ['banner1.png','banner2.png','banner3.png'];
+    let current = 0;
+
+    function toggleMute(){ vid.muted = !vid.muted; }
+
+    setInterval(()=>{
+      img.style.opacity = 1;
+      vid.style.opacity = 0;
+      setTimeout(()=>{
+        current = (current+1)%imgList.length;
+        img.src = imgList[current];
+        img.style.opacity = 0;
+        vid.style.opacity = 1;
+      },2500);
+    },6000);
+  </script>
+
+  <script>
+    const banners = ["banner1.png","banner2.png","banner3.png"]; let bi=0;
+    setInterval(()=>{
+      const img=document.getElementById('banner');
+      img.style.opacity=0;
+      setTimeout(()=>{
+        bi=(bi+1)%banners.length;
+        img.src=banners[bi];
+        img.style.opacity=1;
+      },500);
+    },3500);
+  </script>
+
+  <!-- SERVER LIST -->
+  <h2 class="section-title" id="server">Semua Mode Server</h2>
+  <div class="grid">
+    <div class="card"><h3>Survival 1</h3><p>Mode klasik dengan komunitas besar dan ekonomi stabil.</p></div>
+    <div class="card"><h3>Survival 2</h3><p>Fitur modern, tantangan lebih berat, sistem progresif.</p></div>
+    <div class="card"><h3>RPG World</h3><p>Quest, boss, skill, class, dunia fantasi penuh rahasia.</p></div>
+    <div class="card"><h3>Skyblock</h3><p>Membangun kerajaan dari pulau kecil di langit.</p></div>
+    <div class="card"><h3>Bedwars</h3><p>PvP kompetitif penuh aksi dan strategi.</p></div>
+    <div class="card"><h3>Creative</h3><p>Surga bagi builder — bebas berkreasi tanpa batas.</p></div>
+    <div class="card"><h3>PvP Arena</h3><p>Duel, ranked fight, dan battle cepat.</p></div>
+    <div class="card"><h3>Parkour</h3><p>Tes kelincahanmu melalui rintangan menantang.</p></div>
+  </div>
+
+  <!-- TOP PLAYER -->
+  <h2 class="section-title" id="top">Top Player Mingguan</h2>
+  <div class="grid">
+    <div class="card"><h3>#1 • xRendra</h3><p>Playtime: 89 jam</p></div>
+    <div class="card"><h3>#2 • KenzoMC</h3><p>Playtime: 77 jam</p></div>
+    <div class="card"><h3>#3 • Zylvion</h3><p>Playtime: 63 jam</p></div>
+  </div>
+
+  <!-- ROADMAP -->
+  <h2 class="section-title" id="roadmap">Roadmap Pengembangan</h2>
+  <div class="grid">
+    <div class="card"><p>✔ Event musiman baru</p></div>
+    <div class="card"><p>✔ Economy balancing</p></div>
+    <div class="card"><p>🔄 Update dungeon RPG</p></div>
+    <div class="card"><p>🔄 Marketplace interaktif</p></div>
+    <div class="card"><p>🔜 Guild Wars</p></div>
+    <div class="card"><p>🔜 Battlepass eksklusif</p></div>
+  </div>
+
+  <footer id="contact">
+    <h2 class="section-title" style="font-size:2rem; margin-bottom:20px;">Terhubung Dengan Kami</h2>
+    <p style="font-size:1.2rem; margin-bottom:10px;">IP Server: <span style="color:var(--gold); font-weight:700;">play.nusarealms.id</span></p>
+    <a href=\"https://discord.gg/p6HDEd9SFg\" target="_blank" style="display:inline-block; margin-top:15px; padding:12px 25px; background:var(--gold); color:#000; border-radius:8px; font-weight:700; text-decoration:none; box-shadow:0 0 15px var(--gold);">Gabung Discord</a>
+
+    <div style="margin-top:40px;">
+      <img src="finalbanner.png" style="width:80%; max-width:900px; border-radius:14px; box-shadow:0 0 25px var(--gold);">
+    </div>
+
+    <p style="margin-top:40px; color:#777;">NusaRealms © 2025 — Dunia fantasi dan komunitas Minecraft terbaik di Indonesia.</p>
+    
+
+  <p style="margin-top:40px; color:#777;">NusaRealms © 2025 — Dunia fantasi dan komunitas Minecraft terbaik di Indonesia.</p>
+</footer>
+
+</body>
+</html>
